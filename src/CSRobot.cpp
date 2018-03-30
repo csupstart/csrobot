@@ -105,6 +105,26 @@ void CSRobot::turnAroundLeft() {
   delay(R_STOPDELAY);
   writeSpeed(_motorspeed);
 }
+void CSRobot::motorAControl(int level) {
+  if (level < 0) {
+    digitalWrite(R_IN1, LOW);
+    digitalWrite(R_IN2, HIGH);
+  } else {
+    digitalWrite(R_IN1, HIGH);
+    digitalWrite(R_IN2, LOW);
+  }
+  analogWrite(R_ENA, abs(level));
+}
+void CSRobot::motorBControl(int level) {
+  if (level < 0) {
+    digitalWrite(R_IN3, LOW);
+    digitalWrite(R_IN4, HIGH);
+  } else {
+    digitalWrite(R_IN3, HIGH);
+    digitalWrite(R_IN4, LOW);
+  }
+  analogWrite(R_ENB, abs(level));
+}
 
 // rgb led
 void CSRobot::setBrightness(int level) {

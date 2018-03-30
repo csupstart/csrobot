@@ -34,5 +34,16 @@ void loop() {
     r.stop();
     // reset the speed to 150 for the next loop
     r.setSpeed(150);
+
+    // you can control the speed and direction of individual motors by giving a value from
+    // -255 to positive 255 to indicate direction and speed
+    r.motorAControl(255);
+    r.motorBControl(-255);
+    delay(1000);
+    // if you would like to stop an individual motor, use motorXControl to set the speed to 0
+    r.motorAControl(0);
+    r.motorBControl(0);
+    // r.stop(); still works when motorXControl is used, but stops both motors
+    r.stop();
   }
 }

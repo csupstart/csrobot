@@ -46,6 +46,8 @@ class CSRobot {
     void turnLeft();
     void turnAroundRight();
     void turnAroundLeft();
+    void motorAControl(int level);
+    void motorBControl(int level);
     // rgb led
     void setBrightness(int level);
     void displayColor(int colordef); // might need to change this data type in future

@@ -8,6 +8,8 @@ turnRight	KEYWORD2
 turnLeft	KEYWORD2
 turnAroundRight	KEYWORD2
 turnAroundLeft	KEYWORD2
+motorAControl	KEYWORD2
+motorBControl	KEYWORD2
 setBrightness	KEYWORD2
 displayColor	KEYWORD2
 turnLightOff	KEYWORD2
