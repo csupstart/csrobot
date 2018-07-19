@@ -13,12 +13,18 @@
 
 // INTERNAL DEFINITIONS
 // motor controller
-#define R_ENA 9
-#define R_IN1 8
-#define R_IN2 11
-#define R_ENB 10
-#define R_IN3 12
-#define R_IN4 13
+/* #define R_ENA 9 */
+/* #define R_IN1 8 */
+/* #define R_IN2 11 */
+/* #define R_ENB 10 */
+/* #define R_IN3 12 */
+/* #define R_IN4 13 */
+#define R_ENA 10
+#define R_IN1 12
+#define R_IN2 13
+#define R_ENB 9
+#define R_IN3 8
+#define R_IN4 11
 // rgb led
 #define R_RED 3
 #define R_GREEN 5
@@ -28,8 +34,8 @@
 #define R_BTN2 2
 #define R_LIGHT 0 // analog
 // auto drive parameters
-#define R_FIXEDSPEED 100
-#define R_TURNDELAY 1000
+#define R_FIXEDSPEED 200
+#define R_TURNDELAY 350
 #define R_STOPDELAY 350
 #define R_AROUNDSUB 120
 
@@ -60,6 +66,7 @@ class CSRobot {
   private:
     int _motorspeed;
     int _ledbrightness;
+    int _adj;
     void writeSpeed(int speed);
 };
 
