@@ -27,7 +27,7 @@ void loop() {
     r.stop();
 
     // speed can be anywhere from 0 through 255
-    // at the beginning of a new sketch, the speed is automatically set to 250
+    // at the beginning of a new sketch, the speed is automatically set to 150
     r.setSpeed(255);
     r.driveForward();
     delay(1000);
