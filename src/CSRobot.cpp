@@ -32,12 +32,15 @@ void CSRobot::writeSpeed(int speed) {
         analogWrite(R_ENA, speed + _adj);
       }
       analogWrite(R_ENB, speed);
-  } else {
+  } else if (_adj < 0) {
       if (speed + _adj > 255) {
         analogWrite(R_ENB, 255);
       } else {
         analogWrite(R_ENB, speed + abs(_adj));
       }
+      analogWrite(R_ENA, speed);
+  } else {
+      analogWrite(R_ENA, speed);
       analogWrite(R_ENB, speed);
   }
 }

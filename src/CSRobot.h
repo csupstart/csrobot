@@ -13,18 +13,12 @@
 
 // INTERNAL DEFINITIONS
 // motor controller
-/* #define R_ENA 9 */
-/* #define R_IN1 8 */
-/* #define R_IN2 11 */
-/* #define R_ENB 10 */
-/* #define R_IN3 12 */
-/* #define R_IN4 13 */
-#define R_ENA 10
-#define R_IN1 12
-#define R_IN2 13
-#define R_ENB 9
-#define R_IN3 8
-#define R_IN4 11
+#define R_ENA 9
+#define R_IN1 8
+#define R_IN2 11
+#define R_ENB 10
+#define R_IN3 12
+#define R_IN4 13
 // rgb led
 #define R_RED 3
 #define R_GREEN 5
