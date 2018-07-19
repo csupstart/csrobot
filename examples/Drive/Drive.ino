@@ -3,7 +3,7 @@
 CSRobot r;
 
 void setup() {
-
+  r.setAdjustment(0);
 }
 
 void loop() {

@@ -29,7 +29,7 @@
 #define R_LIGHT 0 // analog
 // auto drive parameters
 #define R_FIXEDSPEED 100
-#define R_TURNDELAY 450
+#define R_TURNDELAY 1000
 #define R_STOPDELAY 350
 #define R_AROUNDSUB 120
 
@@ -37,6 +37,7 @@ class CSRobot {
   public:
     CSRobot();
     // driving
+    void setAdjustment(int adj);
     void setSpeed(int speed);
     void driveForward();
     void driveBackwards();

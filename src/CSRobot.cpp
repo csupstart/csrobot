@@ -17,17 +17,28 @@ CSRobot::CSRobot() {
   _motorspeed = 150;
   writeSpeed(_motorspeed);
   _ledbrightness = 255;
+  _adj = 0;
 }
 
 // driving
+void CSRobot::setAdjustment(int adj) {
+  _adj = adj;
+}
 void CSRobot::writeSpeed(int speed) {
-  analogWrite(R_ENA, speed);
-  // right motor is slower
-  int adj = 5;
-  if (speed + adj > 255) {
-    analogWrite(R_ENB, 255);
+  if (_adj > 0) {
+      if (speed + _adj > 255) {
+        analogWrite(R_ENA, 255);
+      } else {
+        analogWrite(R_ENA, speed + _adj);
+      }
+      analogWrite(R_ENB, speed);
   } else {
-    analogWrite(R_ENB, speed + adj);
+      if (speed + _adj > 255) {
+        analogWrite(R_ENB, 255);
+      } else {
+        analogWrite(R_ENB, speed + abs(_adj));
+      }
+      analogWrite(R_ENB, speed);
   }
 }
 void CSRobot::setSpeed(int speed) {

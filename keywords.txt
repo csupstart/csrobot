@@ -1,4 +1,5 @@
 CSRobot	KEYWORD1
+setAdjustment	KEYWORD2
 setSpeed	KEYWORD2
 driveForward	KEYWORD2
 driveBackwards	KEYWORD2
