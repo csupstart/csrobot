@@ -23,6 +23,7 @@ CSRobot::CSRobot() {
 // driving
 void CSRobot::setAdjustment(int adj) {
   _adj = adj;
+  writeSpeed(_motorspeed);
 }
 void CSRobot::writeSpeed(int speed) {
   if (_adj > 0) {
@@ -33,7 +34,7 @@ void CSRobot::writeSpeed(int speed) {
       }
       analogWrite(R_ENB, speed);
   } else if (_adj < 0) {
-      if (speed + _adj > 255) {
+      if (speed + abs(_adj) > 255) {
         analogWrite(R_ENB, 255);
       } else {
         analogWrite(R_ENB, speed + abs(_adj));
